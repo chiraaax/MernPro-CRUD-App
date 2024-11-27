@@ -13,9 +13,9 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 // Middleware
-app.use(express.json()); // Allows us to accept JSON data in req.body
+app.use(express.json()); 
 
-app.use(cors()); // Enable CORS to allow cross-origin requests
+app.use(cors());
 
 // Routes
 app.use("/api/products", productRoutes);
