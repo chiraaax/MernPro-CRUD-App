@@ -49,3 +49,24 @@ const ProductCard = ({ product }) => {
       isClosable: true,
     });
   };
+
+  const handleUpdateProduct = async (pid, updatedProduct) => {
+    const isValidImageUrl = updatedProduct.image.match(/\.(jpeg|jpg|gif|png)$/);
+    if (!isValidImageUrl) {
+      setImageError("Please provide a valid image URL.");
+      return;
+    }
+
+    setIsUpdating(true);
+    const { success, message } = await updateProduct(pid, updatedProduct);
+    setIsUpdating(false);
+    onClose();
+
+    toast({
+      title: success ? "Updated Successfully" : "Error",
+      description: success ? "Product updated successfully" : message,
+      status: success ? "success" : "error",
+      duration: 3000,
+      isClosable: true,
+    });
+  };
