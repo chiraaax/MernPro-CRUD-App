@@ -137,3 +137,44 @@ const ProductCard = ({ product }) => {
           </Tooltip>
         </HStack>
       </Box>
+
+      {/* Update Modal */}
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Update Product</ModalHeader>
+          <ModalCloseButton isDisabled={isUpdating} />
+          <ModalBody>
+            <VStack spacing={4}>
+              <Input
+                placeholder="Product Name"
+                value={updatedProduct.name}
+                onChange={(e) =>
+                  setUpdatedProduct({ ...updatedProduct, name: e.target.value })
+                }
+                isDisabled={isUpdating}
+              />
+              <Input
+                placeholder="Price"
+                type="number"
+                value={updatedProduct.price}
+                onChange={(e) =>
+                  setUpdatedProduct({ ...updatedProduct, price: e.target.value })
+                }
+                isDisabled={isUpdating}
+              />
+              <Input
+                placeholder="Image URL"
+                value={updatedProduct.image}
+                onChange={(e) =>
+                  setUpdatedProduct({ ...updatedProduct, image: e.target.value })
+                }
+                isDisabled={isUpdating}
+              />
+              {imageError && (
+                <Text fontSize="sm" color="red.500">
+                  {imageError}
+                </Text>
+              )}
+            </VStack>
+          </ModalBody>
