@@ -39,3 +39,40 @@ const Navbar = () => {
           >
             <Link to="/">Product Store 🛒</Link>
           </Text>
+
+          <HStack spacing={4} alignItems="center">
+            {/* Create Product Button */}
+            <Link to="/create">
+              <Button
+                colorScheme="blue"
+                leftIcon={<PlusSquareIcon fontSize={20} />}
+                size="md"
+                transition="transform 0.2s"
+                _hover={{ transform: "scale(1.05)" }}
+              >
+                Add Product
+              </Button>
+            </Link>
+
+            {/* Dark Mode Toggle */}
+            <Button
+              onClick={toggleColorMode}
+              variant="ghost"
+              size="sm"
+              p={2}
+              rounded="full"
+              transition="background-color 0.2s"
+              _hover={{
+                bg: colorMode === "light" ? "gray.200" : "gray.700",
+              }}
+            >
+              {colorMode === "light" ? <IoMoon size="20" /> : <LuSun size="20" />}
+            </Button>
+          </HStack>
+        </Flex>
+      </Container>
+    </Box>
+  );
+};
+
+export default Navbar;
