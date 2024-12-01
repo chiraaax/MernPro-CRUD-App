@@ -47,3 +47,50 @@ const HomePage = () => {
       </Container>
     );
   }
+
+  return (
+    <Container maxW="container.xl" py={12}>
+      <VStack spacing={12}>
+        <Text
+          fontSize="4xl"
+          fontWeight="bold"
+          bgGradient="linear(to-r, cyan.400, blue.500)"
+          bgClip="text"
+          textAlign="center"
+        >
+          Current Products 🚀
+        </Text>
+
+        <SimpleGrid
+          columns={{
+            base: 1,
+            md: 2,
+            lg: 3,
+          }}
+          spacing={8}
+          w="full"
+        >
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </SimpleGrid>
+
+        {products.length === 0 && (
+          <VStack spacing={4}>
+            <Text fontSize="xl" fontWeight="bold" color="gray.500" textAlign="center">
+              No products found 😢
+            </Text>
+            <Link to="/create">
+              <Button colorScheme="blue" size="lg" px={6} borderRadius="full" _hover={{ bg: "blue.600" }}>
+                Create a Product
+              </Button>
+            </Link>
+          </VStack>
+        )}
+      </VStack>
+    </Container>
+  );
+};
+
+export default HomePage;
+
