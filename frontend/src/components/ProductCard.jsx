@@ -70,3 +70,70 @@ const ProductCard = ({ product }) => {
       isClosable: true,
     });
   };
+
+  return (
+    <Box
+      shadow="lg"
+      rounded="xl"
+      overflow="hidden"
+      bg={cardBg}
+      transition="transform 0.3s ease, box-shadow 0.3s ease"
+      _hover={{ transform: "scale(1.03)", shadow: "2xl" }}
+      role="group"
+    >
+      <Box position="relative" overflow="hidden">
+        <Image
+          src={product.image}
+          alt={product.name}
+          h={56}
+          w="full"
+          objectFit="cover"
+          fallbackSrc="https://via.placeholder.com/400x300"
+          transition="all 0.3s"
+          _groupHover={{ filter: "brightness(80%)" }}
+        />
+        <Tag
+          position="absolute"
+          top={3}
+          left={3}
+          bg={badgeBg}
+          color={badgeColor}
+          fontWeight="bold"
+        >
+          ${product.price}
+        </Tag>
+      </Box>
+
+      <Box p={6}>
+        <Heading
+          as="h3"
+          size="md"
+          mb={3}
+          color={textColor}
+          transition="color 0.3s"
+          _groupHover={{ color: "blue.500" }}
+        >
+          {product.name}
+        </Heading>
+
+        <HStack justify="space-between">
+          <Tooltip label="Edit Product" placement="top" hasArrow>
+            <IconButton
+              icon={<EditIcon />}
+              onClick={onOpen}
+              colorScheme="blue"
+              aria-label="Edit Product"
+              size="sm"
+            />
+          </Tooltip>
+          <Tooltip label="Delete Product" placement="top" hasArrow>
+            <IconButton
+              icon={<DeleteIcon />}
+              onClick={() => handleDeleteProduct(product._id)}
+              colorScheme="red"
+              aria-label="Delete Product"
+              size="sm"
+            />
+          </Tooltip>
+        </HStack>
+      </Box>
