@@ -176,8 +176,10 @@ const ProductCard = ({ product }) => {
                   {imageError}
                 </Text>
               )}
+            </VStack>
+          </ModalBody>
 
-              <ModalFooter>
+          <ModalFooter>
             <Button
               colorScheme="blue"
               mr={3}
@@ -198,6 +200,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-
-            </VStack>
-          </ModalBody>
