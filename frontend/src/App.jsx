@@ -13,3 +13,22 @@ const NotFoundPage = () => (
 		</Box>
 	</Center>
 );
+
+function App() {
+	return (
+		<BrowserRouter>
+			<Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
+				<Navbar />
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/create' element={<CreatePage />} />
+					{/* Fallback route for invalid paths */}
+					<Route path='*' element={<NotFoundPage />} />
+				</Routes>
+			</Box>
+		</BrowserRouter>
+	);
+}
+
+export default App;
+
