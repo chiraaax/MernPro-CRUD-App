@@ -176,5 +176,28 @@ const ProductCard = ({ product }) => {
                   {imageError}
                 </Text>
               )}
+
+              <ModalFooter>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={() => handleUpdateProduct(product._id, updatedProduct)}
+              isLoading={isUpdating}
+              loadingText="Updating"
+            >
+              Update
+            </Button>
+            <Button variant="ghost" onClick={onClose} isDisabled={isUpdating}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </Box>
+  );
+};
+
+export default ProductCard;
+
             </VStack>
           </ModalBody>
