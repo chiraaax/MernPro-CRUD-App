@@ -9,6 +9,8 @@ Welcome to **MernPro**, a fully functional online marketplace built using the **
 
 - **Complete CRUD Operations**: 
   - Add, edit, view, and delete products effortlessly.
+- **Dark/Light Mode Toggle**: 
+  - Switch between light and dark themes to enhance user experience and accessibility.
 - **Modern UI/UX**:
   - Designed with **Chakra UI** for a clean, responsive, and intuitive interface.
 - **Fast Development**:
@@ -18,14 +20,16 @@ Welcome to **MernPro**, a fully functional online marketplace built using the **
 - **API Integration**:
   - Seamless integration between the front-end and back-end using RESTful APIs.
 
----
 
+
+---
 
 ## 🛠️ Tech Stack
 
 ### Front-End
 - **React** (with Vite)
 - **Chakra UI** for responsive and modern design
+- **Dark/Light Mode** support using Chakra's theme integration
 
 ### Back-End
 - **Node.js** and **Express.js** for server-side logic
@@ -85,8 +89,11 @@ Welcome to **MernPro**, a fully functional online marketplace built using the **
 
 ## 📸 Screenshots
 
-### 🏠 Homepage
-![Homepage](https://via.placeholder.com/800x400?text=Homepage+Preview)
+### 🏠 Homepage with Light Mode
+![Light Mode Homepage](https://via.placeholder.com/800x400?text=Light+Mode+Preview)
+
+### 🌙 Homepage with Dark Mode
+![Dark Mode Homepage](https://via.placeholder.com/800x400?text=Dark+Mode+Preview)
 
 ### 📋 Product Management
 ![Product Management](https://via.placeholder.com/800x400?text=Product+Management+Preview)
