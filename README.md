@@ -79,7 +79,7 @@ Welcome to **MernPro**, a fully functional online marketplace built using the **
      ```
 
 5. **Open in Browser**:
-   Visit `http://localhost:3000` to access the app.
+   Visit `http://localhost:5173` to access the app.
 
 ---
 
