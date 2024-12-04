@@ -96,7 +96,7 @@ Welcome to **MernPro**, a fully functional online marketplace built using the **
 ![Dark Mode Homepage](https://github.com/chiraaax/MernPro-CRUD-App/blob/main/Screenshot-1.png?raw=true)
 
 ### 📋 Product Management
-![Product Management](https://via.placeholder.com/800x400?text=Product+Management+Preview)
+![Product Management](https://github.com/chiraaax/MernPro-CRUD-App/blob/main/Screenshot-3.png?raw=true)
 
 ---
 
