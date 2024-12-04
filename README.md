@@ -89,8 +89,8 @@ Welcome to **MernPro**, a fully functional online marketplace built using the **
 
 ## 📸 Screenshots
 
-### 🏠 Homepage with Light Mode
-![Light Mode Homepage](https://via.placeholder.com/800x400?text=Light+Mode+Preview)
+### 🏠 Main Page with Light Mode
+![Light Mode Homepage](https://github.com/chiraaax/MernPro-CRUD-App/blob/main/Screenshot-1.png?raw=true)
 
 ### 🌙 Homepage with Dark Mode
 ![Dark Mode Homepage](https://via.placeholder.com/800x400?text=Dark+Mode+Preview)
